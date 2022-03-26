@@ -1,0 +1,291 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Variables */
+:root {
+  --principal: #000000;
+  --secondary: #f8f4f4;
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+  --font-tertiary: 'Quicksand', sans-serif;
+}
+/* Globals */
+html {
+  font-size: 62.5%;
+  color: var(--secondary);
+  background-color: var(--principal);
+}
+a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+ul {
+  list-style-type: none;
+}
+body {
+  min-height: 100vh;
+}
+/* Helpers */
+.flex-row {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+/* Header */
+.title {
+    font-size: 9em;
+    font-family: var(--font-primary);
+    color: var(--secondary);
+    background-color: var(--principal);
+    text-transform: uppercase;
+    justify-content: center;
+}
+header .navigation {
+  margin-top: 50px;
+  margin: 5px auto;
+  font-family: var(--font-secondary);
+  font-size: 3em;
+  background-color: var(--principal);
+  color: var(--secondary);
+  padding: 0 2rem;
+  justify-content: space-evenly;
+}
+nav .menu > li {
+  padding-inline: 15px;
+}
+/* Main section */
+.presentation {
+  align-items: center;
+  padding: 5rem 12rem;
+}
+.presentation__picture {
+  flex-basis: 100%;
+  min-width: 320px;
+}
+.presentation__img {
+  width: 100%;
+  height: 100vh;
+}
+.presentation__paragraph {
+  flex-basis: 40%;
+  color: var(--secondary);
+  font-family: var(--font-tertiary);
+  text-align:center;
+}
+.presentation__container {
+  font-size: 3.0em;
+  font-style: italic;
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 4.5em;
+  }
+  header .navigation {
+    font-size: 1.5em;
+    width: fit-content;
+  }
+  .presentation__container {
+    font-size: 1.5em;
+    max-width:max-content;
+  }
+  .presentation__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 425px) {
+  .presentation {
+    padding: 5rem 25rem;
+  }
+  .presentation__container {
+    font-size: 1.5em;
+    width: 325px;
+    text-align: center;
+  }
+  footer {
+    margin-left: 7.5rem;
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width:375px) {
+  .presentation__img {
+    min-width: 380px;
+  }
+}
+/* What is psilocibyn */
+.presentation1 {
+  margin-top: 5rem;
+  gap: 2rem;
+  align-items: center;
+  padding: 0 5rem;
+}
+.presentation2 {
+  margin-top: 5rem;
+  gap: 2rem;
+  align-items: center;
+  padding: 0 5rem;
+}
+.presentation1__picture {
+  flex-basis: 100%;
+  min-width: 320px;
+}
+.presentation2__picture {
+  flex-basis: 100%;
+  min-width: 320px;
+}
+.presentation1__img {
+  filter: brightness(70%);
+  width: 100%;
+}
+.presentation2__img {
+  width: 100%;
+  filter: brightness(70%);
+}
+.presentation1__img:hover {
+  filter: brightness(100%);
+}
+.presentation2__img:hover {
+  filter: brightness(100%);
+}
+.presentation1__paragraph {
+  flex-basis: 60%;
+  color: var(--secondary);
+  font-family: var(--font-tertiary);
+  text-align:justify;
+}
+.presentation2__paragraph {
+  flex-basis: 60%;
+  color: var(--secondary);
+  font-family: var(--font-tertiary);
+  text-align:justify;
+}
+.presentation1__container {
+  font-size: 2.0em;
+}
+.presentation2__container {
+  font-size: 2.0em;
+}
+.quote {
+  font-style: italic;
+  font-size: 2.0em;
+}
+/* Breakthroughs */
+.presentation3 {
+  gap: 2rem;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.presentation3__img1 {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.presentation3__img2 {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.presentation3__img3 {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.presentation3__paragraph1 {
+  margin-top: 2rem;
+  color: var(--secondary);
+  font-family: var(--font-tertiary);
+  font-size: 2.0em;
+  text-align:left;
+}
+.presentation3__paragraph2 {
+  margin-top: 2rem;
+  color: var(--secondary);
+  font-family: var(--font-tertiary);
+  font-size: 2.0em;
+  text-align:left;
+}
+.presentation3__paragraph3 {
+  margin-top: 2rem;
+  color: var(--secondary);
+  font-family: var(--font-tertiary);
+  font-size: 2.0em;
+  text-align:left;
+}
+@media screen and (max-width:768px) {
+  .presentation3__paragraph1 {
+    font-size: 1.5em;
+  }
+  .presentation3__paragraph2 {
+    font-size: 1.5em;
+  }
+  .presentation3__paragraph3 {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width:425px) {
+  .presentation3 {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  footer {
+    font-size: 1em;
+  }
+}
+/* Mushrooms */
+.presentation4 {
+  margin-top: 5rem;
+  gap: 2rem;
+  align-items: center;
+  padding: 0 5rem;
+}
+.presentation4__picture {
+  flex-basis: 100%;
+  min-width: 320px;
+}
+.presentation4__img1 {
+  width: 100%;
+  filter: brightness(70%);
+}
+.presentation4__img1:hover {
+  filter: brightness(100%);
+}
+.presentation4__paragraph {
+  flex-basis: 60%;
+  color: var(--secondary);
+  font-family: var(--font-tertiary);
+  text-align:justify;
+}
+.presentation4__container {
+  font-size: 2.0em;
+}
+/* Contact us */
+main {
+  color: var(--secondary);
+  font-family: var(--font-tertiary);
+  font-size: 2.0em;
+}
+/* Footer */
+footer {
+  align-items: center;
+  height: 10vh;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+}
+
