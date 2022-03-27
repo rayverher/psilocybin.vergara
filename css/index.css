@@ -15,8 +15,6 @@
 /* Globals */
 html {
   font-size: 62.5%;
-  color: var(--secondary);
-  background-color: var(--principal);
 }
 a {
   text-decoration: none;
@@ -28,6 +26,8 @@ ul {
 }
 body {
   min-height: 100vh;
+  color: var(--secondary);
+  background-color: var(--principal);
 }
 /* Helpers */
 .flex-row {
@@ -37,14 +37,15 @@ body {
   display: flex;
   flex-direction: column;
 }
-.container {
+/* .container {
   max-width: 1080px;
   margin: 0 auto;
-}
+} */
 /* Header */
 .title {
     font-size: 9em;
     font-family: var(--font-primary);
+    font-weight: 900;
     color: var(--secondary);
     background-color: var(--principal);
     text-transform: uppercase;
@@ -242,7 +243,7 @@ nav .menu > li {
   font-size: 2.0em;
 }
 /* Contact us */
-main {
+.form {
   color: var(--secondary);
   font-family: var(--font-tertiary);
   font-size: 2.0em;
